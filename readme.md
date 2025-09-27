@@ -138,3 +138,8 @@ For any issues or questions, please contact Jeet Parab.
 - **Government Data:**  
   Government of India, data.gov.in. *NIN health facilities geo code and additional parameters*. Retrieved November 26, 2024 from  
   [https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month](https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month)
+
+- **Space to Policy:**  
+  Sharma, A., Liu, Y., & Chandrasekaran, S. (2025). Space to Policy: Sustainable Policies for Satellite Utilization.  
+  *Proceedings of the 2025 ACM Conference on Sustainability and Policy*, 1-10.  
+  https://doi.org/10.1145/3736649
