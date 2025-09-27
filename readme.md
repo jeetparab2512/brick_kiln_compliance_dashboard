@@ -1,6 +1,10 @@
-# Enhanced Brick Kiln Compliance Monitor
+# Enhanced Brick Kiln Compliance Monitoring
 
-This project provides an enhanced compliance monitoring tool for brick kilns across different states in India. It features detailed compliance analysis based on proximity to kilns, hospitals, and water bodies with interactive visualization in the form of maps and plots using Folium and Matplotlib, integrated in a Gradio dashboard interface.
+Air pollution causes around 7 million deaths annually, with the brick kiln sector contributing significantly, accounting for 8–14% of air pollution in India. While brick kilns are vital to economic development, their largely unregulated and informal nature makes monitoring compliance challenging.
+
+This compliance dashboard offers a streamlined solution to monitor brick kiln adherence to environmental regulations using machine-learning-based detection from satellite imagery. It visualizes compliance status via interactive maps, charts, and detailed reports, aligning with government policies to aid enforcement and policymaking.
+
+By consolidating complex spatial and regulatory data into an accessible platform, the dashboard supports stakeholders in reducing pollution impacts while balancing the livelihoods of workers involved in this sector.
 
 ## Features
 
@@ -118,9 +122,14 @@ The current version uses source data primarily from:
 
 <!-- Add dashboard screenshots below -->
 
-![Interactive Zoomable Map with accurate location of Compliant and Non Compliant Kilns](images/interactive_zoomable_map.png)
-![Pie chart analysis of compliance status](images/Pie_plot.png)
-![Statewise Compliance Breakdown of Compliance Numbers](images/Compliance_Breakdown.png)
+![Interactive Zoomable Map with accurate location of Compliant and Non Compliant Kilns](images/interactive_zoomable_map.png)  
+This interactive map visually displays the geographic locations of brick kilns classified as compliant or non-compliant based on government environmental regulations. Users can zoom and pan to explore kiln distribution patterns across regions. The map helps identify clusters of non-compliant kilns for targeted policy enforcement and monitoring efforts.
+
+![Pie chart analysis of compliance status](images/Pie_plot.png)  
+The pie chart provides a clear breakdown of the compliance status of all detected brick kilns. It shows the proportion of fully compliant kilns versus those with one or more policy violations. This visual summary enables quick assessment of compliance levels and highlights the extent of regulatory adherence in the monitored area.
+
+![Statewise Compliance Breakdown of Compliance Numbers](images/Compliance_Breakdown.png)  
+This bar chart reports detailed compliance statistics for individual states, showing the counts of kilns categorized by violation type or compliance category. It serves as a comparative tool for policymakers and stakeholders to track progress at the state level and prioritize interventions where violations are most prevalent.
 
 ## Contact
 
