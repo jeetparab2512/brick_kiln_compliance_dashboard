@@ -70,12 +70,21 @@ The current version uses source data primarily from:
   | gis_osm_railways_free_1.shp      | Railway tracks    | No filter                                  |
 
 - **Government Data:**  
-  Geolocation data for approximately 165,000 hospitals and nursing homes was obtained from the Indian Government’s open data portal.
+  Geolocation data for approximately 165,000 hospitals and nursing homes was obtained from the Indian Government’s open data portal:  
+  
+  Government of India, data.gov.in. *NIN health facilities geo code and additional parameters*. Retrieved November 26, 2024 from  
+  [https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month](https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month)
+
 
 - **Brick Kiln Dataset:**  
-  A brick kiln dataset is available on Kaggle:  
-  [Brick Kiln Dataset - Kaggle](https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879)  
-  This data can be used as input to the application.
+  The SentinelKilnDB is a large-scale dataset and benchmark for oriented bounding box (OBB) brick kiln detection in South Asia using satellite imagery. It is described in the paper:  
+  
+  Mondal, R., Parab, J., Kubadia, H., Dubey, S., Junagade, S., Patel, Z. B., & Batra, N. (2025).  
+  *SentinelKilnDB: A Large-Scale Dataset and Benchmark for OBB Brick Kiln Detection in South Asia Using Satellite Imagery.* Advances in Neural Information Processing Systems.  
+  
+  The dataset can be used as input to this application and is available on Kaggle at:  
+  [https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879](https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879)
+
 
 ### Input CSV Format
 
@@ -109,14 +118,23 @@ The current version uses source data primarily from:
 
 <!-- Add dashboard screenshots below -->
 
-![Interactive Zoomable Map with accurate location of Compliant and Non Compliant Kilns](images\interactive_zoomable_map.png)
-
-![Pie chart analysis of compliance status](images\Pie_plot.png)
-
-![Statewise Compliance Breakdown of Compiance Numbers](images\Compliance_Breakdown.png)
+![Interactive Zoomable Map with accurate location of Compliant and Non Compliant Kilns](images/interactive_zoomable_map.png)
+![Pie chart analysis of compliance status](images/Pie_plot.png)
+![Statewise Compliance Breakdown of Compliance Numbers](images/Compliance_Breakdown.png)
 
 ## Contact
 
 There is much more to the site than it seems, check it out!
 
 For any issues or questions, please contact Jeet Parab.
+
+## References
+
+- Mondal, R., Parab, J., Kubadia, H., Dubey, S., Junagade, S., Patel, Z. B., & Batra, N. (2025).  
+  *SentinelKilnDB: A Large-Scale Dataset and Benchmark for OBB Brick Kiln Detection in South Asia Using Satellite Imagery.*  
+  Advances in Neural Information Processing Systems.  
+  [Dataset on Kaggle](https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879)
+
+- **Government Data:**  
+  Government of India, data.gov.in. *NIN health facilities geo code and additional parameters*. Retrieved November 26, 2024 from  
+  [https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month](https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month)
