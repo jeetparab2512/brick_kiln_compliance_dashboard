@@ -14,21 +14,31 @@ By consolidating complex spatial and regulatory data into an accessible platform
 - Visualize detailed compliance status with interactive maps, pie charts, scatter plots, and bar charts.
 - Generate detailed state-wise summaries and downloadable datasets.
 - Flexible user interface built with Gradio for ease of use.
+- **Modular codebase:** All core logic, data utilities, geospatial helpers, and plotting functions are separated into dedicated modules for maintainability.
 
 ## Project Structure
 
-In future releases, the project directory will include the following folders:
+The project directory is now modularized for maintainability:
 
 ```bash
-data/ # This folder will contain all CSV files such as kilns, hospitals, waterways, etc.
-india_shapefiles/ # This folder will contain GeoJSON files for Indian state boundaries
+Brick_Kiln_Compliance_Dashboard/
+│
+├── app.py                # Main Gradio UI and entry point (monolithic version)
+├── modular_app.py        # Modular Gradio UI and entry point (recommended)
+├── compliance.py         # Compliance computation logic
+├── data_utils.py         # Data loading, cleaning, and utility functions
+├── geo_utils.py          # GeoJSON/state boundary helpers
+├── plotting.py           # All matplotlib/plotting functions
+├── requirements.txt      # Python dependencies
+├── data/                 # Place all CSV files here (kilns, hospitals, waterways, etc.)
+├── india_shapefiles/     # Place all GeoJSON files for Indian state boundaries here
+└── images/               # Dashboard screenshots
 ```
 
 - Place all CSV datasets required for the application inside the **data/** folder.
 - Place all GeoJSON files representing Indian states inside the **india_shapefiles/** folder.
 
-The application will be updated to automatically detect and use files from these folders.
-
+The application will automatically detect and use files from these folders.
 
 ## Installation
 
@@ -42,11 +52,18 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the application with:
+You can run the dashboard in two ways:
 
+**Monolithic version:**
 ```bash
 python app.py
 ```
+
+**Modular version (recommended):**
+```bash
+python modular_app.py
+```
+
 Use the interactive Gradio web dashboard to upload data files, adjust compliance thresholds, and view results.
 
 ## Data Sources and Input Format
@@ -75,20 +92,11 @@ The current version uses source data primarily from:
 
 - **Government Data:**  
   Geolocation data for approximately 165,000 hospitals and nursing homes was obtained from the Indian Government’s open data portal:  
-  
-  Government of India, data.gov.in. *NIN health facilities geo code and additional parameters*. Retrieved November 26, 2024 from  
-  [https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month](https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month)
-
+  [NIN health facilities geo code and additional parameters](https://www.data.gov.in/resource/nin-health-faclities-geo-code-and-additional-parameters-updated-till-last-month)
 
 - **Brick Kiln Dataset:**  
-  The SentinelKilnDB is a large-scale dataset and benchmark for oriented bounding box (OBB) brick kiln detection in South Asia using satellite imagery. It is described in the paper:  
-  
-  Mondal, R., Parab, J., Kubadia, H., Dubey, S., Junagade, S., Patel, Z. B., & Batra, N. (2025).  
-  *SentinelKilnDB: A Large-Scale Dataset and Benchmark for OBB Brick Kiln Detection in South Asia Using Satellite Imagery.* Advances in Neural Information Processing Systems.  
-  
-  The dataset can be used as input to this application and is available on Kaggle at:  
-  [https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879](https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879)
-
+  The SentinelKilnDB is a large-scale dataset and benchmark for oriented bounding box (OBB) brick kiln detection in South Asia using satellite imagery.  
+  [SentinelKilnDB on Kaggle](https://www.kaggle.com/datasets/3eb8e7201b14b158ed841718cb777c5b94a6a6375aaa8499c7376ec831f8d879)
 
 ### Input CSV Format
 
@@ -132,8 +140,6 @@ The pie chart provides a clear breakdown of the compliance status of all detecte
 This bar chart reports detailed compliance statistics for individual states, showing the counts of kilns categorized by violation type or compliance category. It serves as a comparative tool for policymakers and stakeholders to track progress at the state level and prioritize interventions where violations are most prevalent.
 
 ## Contact
-
-There is much more to the site than it seems, check it out!
 
 For any issues or questions, please contact Jeet Parab.
 
